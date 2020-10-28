@@ -1,13 +1,9 @@
-FROM guyaltd/python:mongo-connector
-
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+FROM rwynn/monstache:rel6
 
 # Workdir
 ENV WORK_DIR /usr/src/app
-WORKDIR ${WORK_DIR}
+#WORKDIR ${WORK_DIR}
 
-COPY . .
+COPY config.toml ${WORK_DIR}/config.toml
 
-CMD mongo-connector -c config.json 
+ENTRYPOINT monstache -f ${WORK_DIR}/config.toml
