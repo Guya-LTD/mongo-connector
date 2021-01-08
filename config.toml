@@ -9,7 +9,7 @@ elasticsearch-urls = ["http://elasticsearch-master.guya-ltd-elk.svc.cluster.loca
 
 # if you need to seed an index from a collection and not just listen and sync changes events
 # you can copy entire collections or views from MongoDB to Elasticsearch
-direct-read-namespaces = ["db_bnhr6l9.product"]
+direct-read-namespaces = ["db_bnhr6l9.product", "db_bnhr6l9.category"]
 
 # if you want to use MongoDB change streams instead of legacy oplog tailing use change-stream-namespaces
 # change streams require at least MongoDB API 3.6+
